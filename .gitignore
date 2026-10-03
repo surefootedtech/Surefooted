@@ -1,0 +1,5 @@
+# Source deck (not published)
+*.pptx
+.DS_Store
+.claude/
+~$*
