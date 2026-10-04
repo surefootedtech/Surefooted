@@ -22,4 +22,12 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('main section[id]').forEach((s) => observer.observe(s));
 
+// Assemble email links at runtime so the address isn't in the HTML for scrapers
+const reverse = (s) => s.split('').reverse().join('');
+document.querySelectorAll('.js-email').forEach((a) => {
+  const addr = reverse(a.dataset.u) + '@' + reverse(a.dataset.d);
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
