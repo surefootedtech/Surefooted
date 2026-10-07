@@ -164,6 +164,8 @@ p { margin: 0 0 1em; }
 .cards { display: grid; gap: 28px; margin-top: 32px; }
 .cards-2 { grid-template-columns: repeat(2, 1fr); }
 .cards-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.cards-3.products { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.products .card-body { padding: 22px 22px 26px; }
 .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
 .card > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .card-body { padding: 26px 28px 30px; }
@@ -246,7 +248,7 @@ p { margin: 0 0 1em; }
   .hero { min-height: auto; padding: 64px 0; }
   .hero-bg { background: linear-gradient(180deg, rgba(31,63,124,0.92), rgba(46,88,166,0.85)), url("../images/trainer-clinic.jpg") center/cover no-repeat; }
   .audience { grid-template-columns: 1fr 1fr; }
-  .split, .cost-block, .how, .cards-2, .cards-3, .stats-3 { grid-template-columns: 1fr; gap: 28px; }
+  .split, .cost-block, .how, .cards-2, .cards-3, .cards-3.products, .stats-3 { grid-template-columns: 1fr; gap: 28px; }
   .cost-block { margin-top: 48px; }
   .cost-block img { order: 2; }
   .tiles { grid-template-columns: 1fr 1fr; gap: 12px; }
